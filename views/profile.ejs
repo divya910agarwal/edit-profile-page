@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/profile-styles.css">
+
+    <title>IITI Community</title>
+</head>
+  <body>
+    <nav>
+        <div class="nav-left">
+            <a href="landing_page.html"><img src="images/logo.png" class="logo"></a>
+            <!-- <ul>
+                <li>
+                    <img src="images/notification.png" alt="">
+                </li>
+                <li>
+                    <img src="images/inbox.png" alt="">
+                </li>
+                <li>
+                    <img src="images/video.png" alt="">
+                </li>
+            </ul> -->
+        </div>
+        <div class="nav-right">
+           <div class="search-box">
+            <img src="images/search.png">
+            <input type="text" placeholder="Search">
+           </div>
+           <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+            <img src="images/profile-pic.png">
+           </div>
+        </div>
+        <!-- ---------------------settings----------------------- -->
+        <div class="settings">
+            <div id="dark-btn">
+                <span>
+
+                </span>
+            </div>
+            <div class="settings-inner">
+                <div class="user-profile">
+                    <img src="images/profile-pic.png">
+                    <div>
+                        <p>John Nick</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        <div class="user-profile">
+            <img src="images/feedback.png">
+            <div>
+                <p>Give Feedback</p>
+                <a href="mailto:spandan.tech999@gmail.com">Help us to Improve</a>
+            </div>
+        </div>
+        <hr style="margin-bottom: 0;">
+        <div class="setting-links">
+            <img src="images/setting.png" class="setting-icon">
+            <a href="#">Settings and Privacy <img src="images/arrow.png" width="10px" class="arrow"></a>
+        </div>
+        <div class="setting-links">
+            <img src="images/help.png" class="setting-icon">
+            <a href="#">Help and Support <img src="images/arrow.png" width="10px" class="arrow"></a>
+        </div>
+        <div class="setting-links">
+            <img src="images/display.png" class="setting-icon">
+            <a href="#">Display and Accessibility <img src="images/arrow.png" width="10px" class="arrow"></a>
+        </div>
+        <div class="setting-links">
+            <img src="images/logout.png" class="setting-icon">
+            <a href="signupPage.html">Logout<img src="images/arrow.png" width="10px" class="arrow"></a>
+        </div>
+     </div>
+    </nav>
+    <div class="profile-container">
+      <img src="images/cover.png" class="cover-img" alt="">
+      <div class="profile-details">
+        <div class="pd-left">
+          <div class="pd-row">
+            <img src="images/profile.png" class="pd-image"alt="">
+            <div class="">
+              <h3><%= user.firstname %> <%= user.lastname %></h3>
+              <!-- <p>120 Friends - 20 mutual</p> -->
+              <!-- <img src="images//member-1.png" alt="">
+              <img src="images//member-2.png" alt="">
+              <img src="images//member-3.png" alt="">
+              <img src="images//member-4.png" alt=""> -->
+
+            </div>
+
+          </div>
+
+        </div>
+        <div class="pd-right">
+          <button type="button" name="button"><img src="images/add-friends.png" alt="">Friends</button>
+           <a href="http://localhost:8000"><button type="button" name="button"><img src="images/message.png" alt="">Message</button></a> 
+          <br>
+         <a href=""><img src ="images/more.png" /></a>
+        </div>
+
+      </div>
+      <div class="profile-info">
+        <div class="info-col">
+         <div class="profile-intro">
+           <h3>Intro</h3>
+           <p class="intro-text"><%= user.bio %>
+          <img src="images/feeling.png" alt="">  </p>
+            <hr>
+            <ul>
+              <li> <img src="images/profile-job.png" alt=""><%= user.branchname %></li>
+              <li> <img src="images/profile-study.png" alt=""><%= user.address %></li>
+              <li> <img src="images/profile-study.png" alt=""><%= user.phoneno %></li>
+              <li> <img src="images/profile-home.png" alt=""><%= user.birthday %></li>
+              <!-- <li> <img src="images/profile-location.png" alt="">from bangalore,india</li> -->
+            </ul>
+         </div>
+        <!-- <div class="profile-intro">
+          <div class="title-box">
+            <h3>Photos</h3>
+            <a href="#">All photos</a>
+          </div>
+<!--
+          <div class="photo-box container ">
+            <div class="row">
+              <div class="col-sm abc"> <img src="images/photo1.png" alt=""></div>
+              <div class="col-sm abc"> <img src="images/photo2.png" alt=""></div>
+              <div class="col-sm abc"> <img src="images/photo3.png" alt=""></div>
+            </div>
+            <div class="row">
+              <div class="col-sm abc"> <img src="images/photo4.png" alt=""></div>
+              <div class="col-sm abc"> <img src="images/photo5.png" alt=""></div>
+              <div class="col-sm abc"> <img src="images/photo6.png" alt=""></div>
+
+            </div> -->
+
+          <!-- </div> --> -->
+
+        </div>
+        <!-- <div class="profile-intro">
+          <h3>Clubs</h3>
+          <hr>
+
+          <ul>
+            forEach((club, i) => {
+              <li>club[i].name</li>
+
+             });
+
+            <!-- <li><img src="images/console.png" alt="">Gaming club</li>
+            <li><img src="images/hand.png" alt="">CFA club</li> -->
+            <!-- <li></li> -->
+          <!-- </ul>
+
+        </div> -->
+        </div>
+
+        <div class="post-col">
+          <div class="write-post-container">
+              <div class="user-profile">
+                  <img src="images/profile-pic.png">
+                  <div>
+                      <p><%= user.firstname %></p>
+                  </div>
+              </div>
+              <div class="post-input-container">
+                <form class="" action="/post" method="post">
+                    <input type="text" name="postContent" placeholder="type something">
+                </form>
+                <button type="submit" name="button">add post</button>
+
+                  <!-- <textarea rows="3" placeholder="What's on your mind?"></textarea>
+                  <!-- <div class="add-posts">
+                      <a href="#">
+                          <img src="images/live-video.png">Live Video
+                      </a>
+                      <a href="#">
+                          <img src="images/photo.png">Photo/Video
+                      </a>
+                      <a href="#">
+                          <img src="images/feeling.png">Activity
+                      </a>
+                  </div> --> -->
+              </div>
+          </div>
+          <!--  forEach((Post, i) => {  -->
+            <!-- <div class="post-container">
+
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png">
+                        <div>
+                            <p>John Nick</p>
+                            <span>July 17 2022, 00:00am</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="write-post-container">
+                </div>
+                <p class="post-text"> "Post[i].content"</p>
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like-blue.png">120</div>
+                        <div><img src="images/comments.png">45</div>
+                        <div><img src="images/share.png">20</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/profile-pic.png">
+                    </div>
+                </div>
+            </div> -->
+
+        <!--   });  -->
+
+          <!-- <div class="post-container">
+
+              <div class="post-row">
+                  <div class="user-profile">
+                      <img src="images/profile-pic.png">
+                      <div>
+                          <p>John Nick</p>
+                          <span>July 17 2022, 00:00am</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="write-post-container">
+              </div>
+              <p class="post-text">It's a beautiiful day @Maheshwar</span></p>
+
+              <div class="post-row">
+                  <div class="activity-icons">
+                      <div><img src="images/like-blue.png">120</div>
+                      <div><img src="images/comments.png">45</div>
+                      <div><img src="images/share.png">20</div>
+                  </div>
+                  <div class="post-profile-icon">
+                      <img src="images/profile-pic.png">
+                  </div>
+              </div>
+          </div>
+
+      <div class="post-container">
+          <div class="post-row">
+              <div class="user-profile">
+                  <img src="images/profile-pic.png">
+                  <div>
+                      <p>John Nick</p>
+                      <span>July 17 2022, 00:00am</span>
+                  </div>
+              </div>
+          </div>
+          <div class="write-post-container">
+          </div>
+          <p class="post-text">It was a night to remember <span>@Bonfire</span></p>
+          <img src="images/feed-image-2.png" class="post-img">
+          <div class="post-row">
+              <div class="activity-icons">
+                  <div><img src="images/like.png">20</div>
+                  <div><img src="images/comments.png">45</div>
+                  <div><img src="images/share.png">10</div>
+              </div>
+              <div class="post-profile-icon">
+                  <img src="images/profile-pic.png">
+              </div>
+          </div>
+         </div> -->
+         <button type="button" class="refresh" onclick="fun()">Refresh</button>
+      </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer">
+        <p>Copyright 2022 - IIT Indore</p>
+    </div>
+    <script>
+      function fun(){
+        location.reload();
+      }
+    </script>
+
+    <script src="js/profilePage.js">
+
+  </body>
+
+    </script>
+    <script type="text/javascript">
+    var settingsheight1 = document.querySelector(".settings");
+var darkbtn = document.getElementById("dark-btn");
+var chatheight1 = document.querySelector(".enclose-chat");
+
+function settingsMenuToggle(){
+    settingsheight1.classList.toggle("settings-height1");
+}
+darkbtn.onclick = function(){
+    darkbtn.classList.toggle("dark-btn-on");
+    document.body.classList.toggle("dark-theme");
+
+    if(localStorage.getItem("theme")== "light"){
+        localStorage.setItem("theme","dark");
+    }
+    else{
+        localStorage.setItem("theme","light")
+    }
+}
+
+if(localStorage.getItem("theme")== "light"){
+    darkbtn.classList.remove("dark-btn-on");
+    document.body.classList.remove("dark-theme");
+}
+else if(localStorage.getItem("theme")== "dark"){
+    darkbtn.classList.add("dark-btn-on");
+    document.body.classList.add("dark-theme");
+}
+else{
+    localStorage.setItem("theme","light");
+}
+function clickSide(){
+  if($(".enclose-chat").css('display') === "none"){
+    $(".sidebar-button").text("Hide Chat");
+  }
+  else{
+    $(".sidebar-button").text("Show Chat");
+  }
+}
+function clickMore(){
+  if($(".event").css('display') === "none"){
+    $(".seeMore-button").text("See Less");
+  }
+  else{
+    $(".seeMore-button").text("See All");
+  }
+}
+$(".sidebar-button").on("click", function (){
+  $(".enclose-chat").slideToggle();
+});
+
+$(".seeMore-button").on("click", function (){
+  $(".event").slideToggle();
+});
+$(".refresh").on("click", function (){
+  location.reload();
+})
+
+
+    </script>
+  </body>
+</html>
